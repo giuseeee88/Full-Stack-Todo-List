@@ -27,7 +27,7 @@ const deleteLastTask = () => {
             zonadinamica.innerHTML = httpRequest.responseText;
         }
     };
-    httpRequest.open("GET", "azioni.php?elementi=last&azione=aggiorna", true);
+    httpRequest.open("GET", "../backend/azioni.php?elementi=last&azione=aggiorna", true);
     httpRequest.send();
 }
 
@@ -46,7 +46,7 @@ const deleteTask = (elementi) => {
                 zonadinamica.innerHTML = httpRequest.responseText;
             }
         };
-        httpRequest.open("GET", "azioni.php?elementi=" + valoriElementi + "&azione=aggiorna", true);
+        httpRequest.open("GET", "../backend/azioni.php?elementi=" + valoriElementi + "&azione=aggiorna", true);
         httpRequest.send();
     }
 };
@@ -105,7 +105,7 @@ const addTask = () => {
                     zonadinamica.innerHTML = httpRequest.responseText;
                 }
             }
-            httpRequest.open("GET", `azioni.php?descrizione=${descrizione}&stato=${stato}&azione=aggiungi`, true);
+            httpRequest.open("GET", `../backend/azioni.php?descrizione=${descrizione}&stato=${stato}&azione=aggiungi`, true);
             httpRequest.send();
         };
     })
@@ -165,7 +165,7 @@ const editTask = (button) => {
                 zonadinamica.innerHTML = httpRequest.responseText;
             }
         }
-        httpRequest.open("GET", "azioni.php?numero_elemento=" + numero_elemento + "&nuova_descrizione=" + nuova_descrizione + "&nuovo_stato=" + nuovo_stato + "&azione=modifica", true);
+        httpRequest.open("GET", "../backend/azioni.php?numero_elemento=" + numero_elemento + "&nuova_descrizione=" + nuova_descrizione + "&nuovo_stato=" + nuovo_stato + "&azione=modifica", true);
         httpRequest.send();
     });
 };

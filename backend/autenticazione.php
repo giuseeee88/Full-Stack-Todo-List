@@ -16,7 +16,7 @@
 
             $result = $conn->query("SELECT * FROM utenti WHERE email = '$email'");
 
-            if($result->num_rows === 0){
+            if($result->num_rows == 0){
                 $sql = "INSERT INTO utenti(username, email, passkey) VALUES ('$username', '$email', '$password_hash')";
                 $result = $conn->query($sql);
 
@@ -39,11 +39,9 @@
                     echo "</div>";
                 echo "</div>";
             }
-
-            break;
+        break;
 
         case "login":
-            echo "ciao";
             if(isset($_POST["emailAddress"])) $email = $_POST["emailAddress"];
             if(isset($_POST["password"])) $password = $_POST["password"];
 
@@ -61,19 +59,18 @@
                         header("Location: index.php");
                     }
 
-                    else header("Location: login.html");
+                    else header("Location: ../frontend/index.html");
                 }
 
-                else header("Location: registrazione.html");
+                else header("Location: ../frontend/registrazione.html");
             }
 
-            else header("Location: registrazione.html");
-
-            break;
+            else header("Location: ../frontend/registrazione.html");
+        break;
 
         case "logout":
             $_SESSION["username"] = "";
-            break;
+        break;
     }
 
     $conn->close();

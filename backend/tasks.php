@@ -1,7 +1,7 @@
 <?php
     if(!isset($_SESSION)){
         session_start();
-        if(!isset($_SESSION["username"]) || empty($_SESSION["username"])) header("Location: login.html");
+        if(!isset($_SESSION["username"]) || empty($_SESSION["username"])) header("Location: ../frontend/login.html");
     }
 ?>
 <div id="contenuto" class="container">
@@ -124,4 +124,4 @@
         else echo "<br><h4>Aggiungi una task</h4>";
     ?>
 </div>
-<script src="autenticazione.js"></script>
+<script src="../frontend/autenticazione.js"></script>
