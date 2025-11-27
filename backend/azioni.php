@@ -30,8 +30,7 @@
                     }
                 }
             }
-
-            break;
+        break;
 
         case "aggiungi":
             if(isset($_GET["descrizione"]) && isset($_GET["stato"])){
@@ -56,8 +55,7 @@
         
                 $stmt->close();
             }
-            
-            break;
+        break;
 
         case "modifica":
             if(isset($_GET["numero_elemento"])) $numero_elemento = $_GET["numero_elemento"];
@@ -71,8 +69,7 @@
                 $stmt->bind_param("ssii", $nuova_descrizione, $nuovo_stato, $numero_elemento, $id_utente);
                 $stmt->execute();
             }
-
-            break;
+        break;
     }
 
     include "tasks.php";

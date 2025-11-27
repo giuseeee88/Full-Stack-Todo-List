@@ -59,7 +59,7 @@
                         header("Location: index.php");
                     }
 
-                    else header("Location: ../frontend/index.html");
+                    else header("Location: ../index.html");
                 }
 
                 else header("Location: ../frontend/registrazione.html");

@@ -75,5 +75,5 @@ const logout = () => {
   xmlHttp.open("post", "../backend/autenticazione.php?azione=logout", true);
   xmlHttp.send();
 
-  window.location.assign("index.html");
+  window.location.assign("../index.html");
 };

@@ -1,7 +1,7 @@
 <?php
     if(!isset($_SESSION)){
         session_start();
-        if(!isset($_SESSION["username"]) || empty($_SESSION["username"])) header("Location: ../frontend/login.html");
+        if(!isset($_SESSION["username"]) || empty($_SESSION["username"])) header("Location: ../index.html");
     }
 ?>
 <div id="contenuto" class="container">

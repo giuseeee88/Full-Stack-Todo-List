@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="icon" type="image/x-icon" href="logo.png">
+    <link rel="stylesheet" href="frontend/index.css">
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <style type="text/tailwindcss">
         @layer utilities {
@@ -19,7 +19,7 @@
     <div class="flex items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900">
         <section class="max-w-4xl p-10 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800">
             <h2 class="text-3xl text-center mb-10 font-semibold text-gray-700 capitalize dark:text-white">Login</h2>
-            <form method="post" action="../backend/autenticazione.php">
+            <form method="post" action="backend/autenticazione.php">
                 <div class="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
                     <div>
                         <label class="text-gray-700 dark:text-gray-200" for="emailAddress">Email</label>
@@ -38,7 +38,7 @@
                 <input type="hidden" name="azione" value="login">
             </form>
             <div class="flex align-center justify-center mt-10">
-                <a href="registrazione.html"><button class="px-8 py-2.5 leading-5 text-white transition-colors duration-300 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600 cursor-pointer">Registrati</button></a>
+                <a href="frontend/registrazione.html"><button class="px-8 py-2.5 leading-5 text-white transition-colors duration-300 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600 cursor-pointer">Registrati</button></a>
             </div>
         </section>
     </div>
